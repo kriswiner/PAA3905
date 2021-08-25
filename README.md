@@ -1,7 +1,8 @@
 # PAA3905
 
- This sketch is for the PAA3905 optical flow sensor. The sensor uses standard SPI for communications at 
- a maximum serial port speed of 2 MHz.
+ This sketch configures and read data from the PAA3905 optical flow sensor. 
+ The sensor uses standard SPI for communications at a maximum serial port speed of 2 MHz. The sensor data ready
+ is signaled by an active LOW interrupt.
  
  This sensor offers two sensitivities: standard detection and enhanced detection for rough terrain 
  at > 15 cm height. The sensor can automatically switch between bright (>60 lux), low light (>30 lux), 
