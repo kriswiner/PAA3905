@@ -9,4 +9,4 @@
  
  ![image](https://user-images.githubusercontent.com/6698410/130867936-83a9b875-73ed-4f13-b8b0-949b0c427e26.jpg)
  
- I am using the STM32L432 [Ladybug](https://www.tindie.com/products/tleracorp/ladybug-stm32l432-development-board/) development board for testing. The PAA3905 breakout board [design](https://oshpark.com/shared_projects/lCUt7xVA) is available at OSH Park.
+ I am using the STM32L432 [Ladybug](https://www.tindie.com/products/tleracorp/ladybug-stm32l432-development-board/) development board for testing. The PAA3905 breakout board [design](https://oshpark.com/shared_projects/lCUt7xVA) is available at OSH Park. Contct [PixArt](https://www.pixart.com/products-comparison/16/Optical_Motion_Tracking) for data sheet and to order the PAA3905 and appropriate lenses.
