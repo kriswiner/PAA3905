@@ -3,12 +3,11 @@
  *  Created by Kris Winer
  *  
  This sketch is for the PAA3905 optical flow sensor. This sensor offers two sensitivities:
- standard detection and an enhanced detection. The sensor can automatically switch between bright, 
- low light, and super low light conditions. Bright and low light modes work at 60 and 30 lux, respectively,
- where the frame rate is 126 frames per second. The super low light mode is for light conditions below 5 lux 
- and is limited to 50 frames per second. The sensor uses typicall 3.5 mA in operation and has a 12 uA shutdown mode.
- Lastly, the sensor can operate in a raw data mode producing 35 x 35 pixel images from the sensor at a frame rate of
- ~15 Hz. This makes the PAA3905 an inexpensive, lowresolution, infrared-sensitive video camera.
+ standard detection and enhanced detection. The sensor can automatically switch between bright (>60 lux), 
+ low light (>30 lux), and super low light (> 5 lux) conditions. Bright and low light modes work at 126 frames per second. 
+ The super low light mode is limited to 50 frames per second. The sensor uses typically 3.5 mA in operation and has a 12 uA shutdown mode.
+ The sensor can operate in raw data (frame grab) mode producing 35 x 35 pixel images from the sensor at a frame rate of
+ ~15 Hz. This makes the PAA3905 an inexpensive, low-resolution, infrared-sensitive video camera.
  
  The sketch uses default SPI pins on the Ladybug development board.
 
