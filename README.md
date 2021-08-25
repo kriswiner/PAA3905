@@ -1,9 +1,11 @@
 # PAA3905
 
- This sketch is for the PAA3905 optical flow sensor. This sensor offers two sensitivities:
- standard detection and enhanced detection for rough terrain at > 15 cm height. 
- The sensor can automatically switch between bright (>60 lux), low light (>30 lux), and super low 
- light (> 5 lux) conditions. Bright and low light modes work at 126 frames per second. The super 
+ This sketch is for the PAA3905 optical flow sensor. The sensor uses standard SPI for communications at 
+ a maximum serial port speed of 2 MHz.
+ 
+ This sensor offers two sensitivities: standard detection and enhanced detection for rough terrain 
+ at > 15 cm height. The sensor can automatically switch between bright (>60 lux), low light (>30 lux), 
+ and super low light (> 5 lux) conditions. Bright and low light modes work at 126 frames per second. The super 
  low light mode is limited to 50 frames per second. 
  
  The sensor uses typically 3.5 mA in operation and has a 12 uA shutdown mode The sensor can operate 
