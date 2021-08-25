@@ -2,7 +2,7 @@
  *  
  *  Created by Kris Winer
  *  
- This sketch configures and read data from the PAA3905 optical flow sensor. 
+ This sketch configures and reads data from the PAA3905 optical flow sensor. 
  The sensor uses standard SPI for communications at a maximum serial port speed of 2 MHz. The sensor data ready
  is signaled by an active LOW interrupt.
  
