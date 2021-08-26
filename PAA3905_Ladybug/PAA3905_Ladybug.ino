@@ -168,10 +168,12 @@ void loop() {
     delay(4000);
 
     frameTime = millis();
-    opticalFlow.enterFrameCaptureMode();
-    
-      opticalFlow.captureFrame(frameArray);
-      for(uint8_t ii = 0; ii < 35; ii++) // plot the frame data on the serial monitor (TFT display would be better)
+    opticalFlow.enterFrameCaptureMode();   
+    opticalFlow.captureFrame(frameArray);
+    opticalFlow.exitFrameCaptureMode(); // exit fram capture mode
+    Serial.print("Frame time = "); Serial.print(millis() - frameTime); Serial.println(" ms"); Serial.println(" ");
+
+    for(uint8_t ii = 0; ii < 35; ii++) // plot the frame data on the serial monitor (TFT display would be better)
       {
         Serial.print(ii); Serial.print(" "); 
         for(uint8_t jj = 0; jj < 35; jj++)
@@ -179,8 +181,8 @@ void loop() {
         Serial.print(frameArray[ii*35 + jj]); Serial.print(" ");  
         }
         Serial.println(" ");
-      }
-      Serial.println(" ");
+    }
+        Serial.println(" ");
 
     opticalFlow.exitFrameCaptureMode(); // exit fram capture mode
     Serial.print("Frame time = "); Serial.print(millis() - frameTime); Serial.println(" ms"); Serial.println(" ");
@@ -189,6 +191,8 @@ void loop() {
     opticalFlow.reset(); // Reset PAA3905 to return all registers to default before configuring
     delay(50);
     opticalFlow.setMode(mode, autoMode);         // set modes
+    opticalFlow.setResolution(pixelRes);         // set resolution fraction of default 0x2A
+    opticalFlow.setOrientation(orient);          // set orientation
     statusCheck = opticalFlow.status();          // clear interrupt before entering main loop
     Serial.println("Back in Navigation mode!");
   }
