@@ -32,7 +32,7 @@
  I could also just store the 1225 bytes of data on the flash for later download. I could record ~10 minutes of video at the ~18 Hz frame rate. 
  
  In the image below the PAA3905 is pointed toward a window with my hand in the field of view (basically backlit). 
- In addition to faster display speed, using the PAA3905 as a video camera would benefit from using an IR (830 or 940 nm)led and the led sync pin for scene illumination. 
+ In addition to faster display speed, using the PAA3905 as a video camera would benefit from using an IR (830 or 940 nm) led and the led sync pin for scene illumination. 
  I might try this next.
  
  ![image2](https://user-images.githubusercontent.com/6698410/132047219-fcb7dcb0-287c-4db8-a6fe-3b6ec7886a98.jpg)
