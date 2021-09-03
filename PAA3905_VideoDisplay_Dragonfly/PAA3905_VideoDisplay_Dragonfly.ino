@@ -50,9 +50,9 @@
 #include "ColorDisplay.h"
 
 // Pin definitions
-#define CSPIN  10  // chip select for SPI 
-#define MOSI   11  // SPI MOSI pin on Dragonfly required for frame capture
-#define MOT    31  // use as data ready interrupt
+#define CSPIN  10  // chip select for PAA3905
+#define MOSI   11  // SPI MOSI pin on Dragonfly required for PAA3905 frame capture
+#define MOT    31  // use as AA3905 data ready interrupt
 #define myLed  25  // red led
 
 // Dragonfly development board connections for display
@@ -81,6 +81,7 @@ PAA3905 opticalFlow(CSPIN); // Instantiate PAA3905
 // Configure color display
 uint16_t color;
 uint8_t rgb, red, green, blue;
+float tmpPixel = 0;
 
 Adafruit_ST7735 tft = Adafruit_ST7735(cs, dc, rst);
 
@@ -163,17 +164,19 @@ void loop() {
     }
         Serial.println(" ");
 */
+    
   for(int y=0; y<35; y++){ //go through all the rows
   for(int x=0; x<35; x++){ //go through all the columns
-  
-    rgb = frameArray[y+x*35];
+
+    tmpPixel = (float) frameArray[y+x*35];
+    rgb = (uint8_t)((tmpPixel/255.0f) * 199.0f); // 0 - 199 = 200 possible rgb color values
 
     red   = rgb_colors[rgb*3] >> 3;          // keep 5 MS bits
     green = rgb_colors[rgb*3 + 1] >> 2;      // keep 6 MS bits
     blue  = rgb_colors[rgb*3 + 2] >> 3;      // keep 5 MS bits
     color = red << 11 | green << 5 | blue;   // construct rgb565 color for tft display
 
-    tft.fillRect(x*4, y*4, 4, 4, color); // data on 140 x 140 pixels of a 160 x 128 pixel display
+    tft.fillRect(x*4, y*4, 4, 4, color);     // data on 140 x 140 pixels of a 160 x 128 pixel display
   }
   }
 
