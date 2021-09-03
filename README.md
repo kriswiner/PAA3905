@@ -27,7 +27,7 @@
  In the main loop it takes 56 ms to grab a 35 x 35 pixel (each pixel is 1  byte) frame but the display rate seems more like about ~2 Hz or so. 
  
  I am plotting the data on the TFT display by mapping rgb colors to intensity. Since I am using the Dragonfly with its embedded 16 MByte SPI NOR flash 
- I could also just store the 1225 bytes of data on the flash for later download. I could record ~10 minutes of video at the ~18 Hz frame rate. 
+ I could also just store the 1225 bytes of data per frame on the flash for later download. I could record ~10 minutes of video at the ~18 Hz frame rate. 
  
  In the image below the PAA3905 is pointed toward a window with my hand in the field of view (basically backlit). 
  In addition to faster display speed, using the PAA3905 as a video camera would benefit from using an IR (830 or 940 nm) led and the led sync pin for scene illumination. 
