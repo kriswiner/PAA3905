@@ -21,7 +21,14 @@
 
  The sensor can also operate in raw data (frame grab) mode producing 35 x 35 pixel images from the 
  sensor at a frame rate of ~15 Hz. This makes the PAA3905 an inexpensive, low-resolution, infrared-sensitive 
- video camera. I tested this using Adafruit's 160 x 128 pixel rgb TFT [display](https://learn.adafruit.com/1-8-tft-display) on an STM32L476 [Dragonfly] (https://www.tindie.com/products/tleracorp/dragonfly-stm32l47696-development-board/) development board. In the main loop it takes 56 ms to grab a 35 x 35 pixel (each pixel is 1  byte) frame but the display rate seems more like about ~2 Hz or so. I am plotting the data on the TFT display by mapping rgb colors to intensity. In the image below the PAA3905 is pointed toward a window with my hand in the field of view. In addition to faster display speed using the PAA3905 as a video camera would benefit from using an led and the led sync pin for scene illumination. I might try this next.
+ video camera. I tested this using Adafruit's 160 x 128 pixel rgb TFT [display](https://learn.adafruit.com/1-8-tft-display) 
+ on an STM32L476 [Dragonfly] (https://www.tindie.com/products/tleracorp/dragonfly-stm32l47696-development-board/) development board. 
+ In the main loop it takes 56 ms to grab a 35 x 35 pixel (each pixel is 1  byte) frame but the display rate seems more like about ~2 Hz or so. 
+ I am plotting the data on the TFT display by mapping rgb colors to intensity. Since I am using the Dragonfly with its embedded 16 MByte SPI NOR flash 
+ I could also just store the 1225 bytes of data on the flash for later download. I could record ~10 minutes of video at the ~17 Hz frame rate. 
+ 
+ In the image below the PAA3905 is pointed toward a window with my hand in the field of view (basically backlit). 
+ In addition to faster display speed, using the PAA3905 as a video camera would benefit from using an led and the led sync pin for scene illumination. I might try this next.
  
  ![image2](https://user-images.githubusercontent.com/6698410/132047219-fcb7dcb0-287c-4db8-a6fe-3b6ec7886a98.jpg)
  
