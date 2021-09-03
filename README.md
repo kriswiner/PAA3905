@@ -25,8 +25,6 @@
  on an STM32L476 [Dragonfly](https://www.tindie.com/products/tleracorp/dragonfly-stm32l47696-development-board/) development board. 
  
  In the main loop it takes 56 ms to grab a 35 x 35 pixel (each pixel is 1  byte) frame but the display rate seems more like about ~2 Hz or so. 
- This is due to the fact that I am using the same 2 MHz SPI bus for both the sensor and the display. 
- I assume if I were to run the display from a separate SPI bus at 20 MHz the display speed would keep up with the frame rate. TBD.
  
  I am plotting the data on the TFT display by mapping rgb colors to intensity. Since I am using the Dragonfly with its embedded 16 MByte SPI NOR flash 
  I could also just store the 1225 bytes of data on the flash for later download. I could record ~10 minutes of video at the ~18 Hz frame rate. 
