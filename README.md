@@ -19,7 +19,7 @@
  
  I am using the STM32L432 [Ladybug](https://www.tindie.com/products/tleracorp/ladybug-stm32l432-development-board/) development board for testing. 
 
- The sensor can also operate in raw data (frame grab) mode producing 35 x 35 pixel images from the 
+ The sensor can also operate in raw data (frame grab) mode producing 8-bit, 35 x 35 pixel images from the 
  sensor at a frame rate of ~18 Hz. This makes the PAA3905 an inexpensive, low-resolution, infrared-sensitive 
  video camera. I tested this using Adafruit's 160 x 128 pixel rgb TFT [display](https://learn.adafruit.com/1-8-tft-display) 
  on an STM32L476 [Dragonfly](https://www.tindie.com/products/tleracorp/dragonfly-stm32l47696-development-board/) development board. 
