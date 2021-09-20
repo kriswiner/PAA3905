@@ -427,8 +427,8 @@ void PAA3905::standardDetection() // default
   writeByteDelay(0x4A, 0x1E);
   writeByteDelay(0x4B, 0x1E); // 50
 
-  writeByteDelay(0x4C, 0x34C); // 51 
-  writeByteDelay(0x4D, 0x34C);  
+  writeByteDelay(0x4C, 0x34); // 51 
+  writeByteDelay(0x4D, 0x34);  
   writeByteDelay(0x46, 0x32);
   writeByteDelay(0x59, 0x0D);
   writeByteDelay(0x7F, 0x0A);
