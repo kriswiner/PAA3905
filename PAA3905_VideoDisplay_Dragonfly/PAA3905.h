@@ -64,7 +64,7 @@
 class PAA3905 {
 public:
   PAA3905(uint8_t cspin);
-  boolean begin(void);
+  void begin(void);
   uint8_t status();
   void initRegisters(uint8_t mode);
   void readMotionCount(int16_t *deltaX, int16_t *deltaY, uint8_t *SQUAL, uint32_t *Shutter);
@@ -80,7 +80,7 @@ public:
   void powerup();
   uint8_t getMode();
   void enterFrameCaptureMode();
-  uint8_t captureFrame(uint8_t * frameArray);
+  void captureFrame(uint8_t * frameArray);
   void exitFrameCaptureMode();
 
 private:
