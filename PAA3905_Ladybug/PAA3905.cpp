@@ -28,7 +28,7 @@ PAA3905::PAA3905(uint8_t cspin)
 { }
 
 
-boolean PAA3905::begin(void) 
+void PAA3905::begin(void) 
 {
   // Setup SPI port
   SPI.beginTransaction(SPISettings(2000000, MSBFIRST, SPI_MODE3)); // 2 MHz max SPI clock frequency
@@ -269,7 +269,7 @@ void PAA3905::enterFrameCaptureMode()
 }
 
   
-uint8_t PAA3905::captureFrame(uint8_t * frameArray)
+void PAA3905::captureFrame(uint8_t * frameArray)
 {  
   uint8_t tempStatus = 0;
   while( !(tempStatus & 0x01) ) {
