@@ -182,7 +182,7 @@ uint8_t PAA3905::status()
 void PAA3905::readMotionCount(int16_t *deltaX, int16_t *deltaY, uint8_t *SQUAL, uint32_t *Shutter)
 {
   *deltaX =  ((int16_t) readByte(PAA3905_DELTA_X_H) << 8) | readByte(PAA3905_DELTA_X_L);
-  *deltaY =  ((int16_t) readByte(PAA3905_DELTA_Y_H) << 8) | readByte(PAA3905_DELTA_X_L);
+  *deltaY =  ((int16_t) readByte(PAA3905_DELTA_Y_H) << 8) | readByte(PAA3905_DELTA_Y_L);
   *SQUAL =              readByte(PAA3905_SQUAL);
   *Shutter = ((uint32_t)readByte(PAA3905_SHUTTER_H) << 16) | ((uint32_t)readByte(PAA3905_SHUTTER_M) << 8) | readByte(PAA3905_SHUTTER_L);
 }
