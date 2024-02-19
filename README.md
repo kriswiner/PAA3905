@@ -39,4 +39,4 @@
  
  Contact [PixArt](https://www.pixart.com/products-comparison/16/Optical_Motion_Tracking) for data sheet and to order the PAA3905 and appropriate lenses.
  
- Breakout board available for sale on [Tindie](https://www.tindie.com/products/onehorse/paa3905-optical-flow-sensor/).
+ Breakout board available for sale on [Tindie](https://www.tindie.com/products/onehorse/paa3905-optical-flow-sensor/) and at [Elecrow](https://www.elecrow.com/paa3905-optical-flow-camera.html).
